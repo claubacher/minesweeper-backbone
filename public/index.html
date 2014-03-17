@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minesweeper</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="minesweeper">
+    <h1>Minesweeper</h1>
+    <div class="board">
+      <div class="options">
+        <label for="numRows">Rows: </label>
+        <select id="numRows" name="numRows">
+          <option value="6" selected>6</option>
+          <option value="8">8</option>
+          <option value="12">12</option>
+        </select>
+        <label for="numCols">Columns: </label>
+        <select id="numCols" name="numCols">
+          <option value="6" selected>6</option>
+          <option value="8">8</option>
+          <option value="12">12</option>
+        </select>
+        <button id="reset-board">Reset Board</button>
+      </div>
+      <ul class="cells"></ul>
+    </div>
+  </div>
+  <script src="js/lib/jquery/dist/jquery.js"></script>
+  <script src="js/lib/underscore/underscore.js"></script>
+  <script src="js/lib/backbone/backbone.js"></script>
+  <script src="js/models/cell.js"></script>
+  <script src="js/collections/board.js"></script>
+  <script src="js/views/cell.js"></script>
+  <script src="js/views/board.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

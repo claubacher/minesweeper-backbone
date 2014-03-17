@@ -1,0 +1,93 @@
+/* @font-face { */
+  /* font-family: Symbola; */
+  /* src: url(http://users.teilar.gr/~g1951d/Symbola.ttf); */
+/* } */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+#minesweeper {
+  height: 90%;
+  width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  margin: 12px auto;
+  width: 320px;
+}
+
+.options {
+  text-align: center;
+  width: 320px;
+  margin: 12px auto;
+}
+
+.cells {
+  /* height: 400px; */
+  /* width: 400px; */
+  margin: 12px auto;
+  padding: 0;
+  list-style-type: none;
+  border-top: 4px solid black;
+  border-left: 4px solid black;
+}
+
+.cell {
+  box-sizing: border-box;
+  /* height: 12.5%; */
+  /* width: 12.5%; */
+  float: left;
+  border-right: 4px solid black;
+  border-bottom: 4px solid black;
+  background: white;
+  position: relative;
+}
+
+.showing:after {
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.flag:after {
+  content: '?';
+}
+
+.zero {
+  background: gray;
+}
+
+.number:after {
+  content: attr(data-content);
+  color: green;
+}
+
+.bomb:after {
+  /* content: '\1F4A3'; */
+  /* font-family: Symbola; */
+  content: 'Bomb';
+  font-size: 14px;
+  color: red;
+}
+
+.msg {
+  text-align: center;
+  font-size: 20px;
+}
+
+.win {
+  color: green;
+}
+
+.lose {
+  color: red;
+}
