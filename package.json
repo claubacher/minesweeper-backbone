@@ -1,0 +1,24 @@
+{
+  "name": "minesweeper-backbone",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "minesweeper",
+    "backbone"
+  ],
+  "author": "chris laubacher",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "connect": "~2.14.2"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
