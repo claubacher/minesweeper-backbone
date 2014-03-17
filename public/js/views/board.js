@@ -5,16 +5,6 @@ var BoardView = Backbone.View.extend({
     'click #reset-board': 'resetBoard'
   },
   
-  resetBoard: function() {
-    this.board.reset();
-
-    this.numRows = +$('#numRows').val();
-    this.numCols = +$('#numCols').val();
-    this.numBombs = Math.floor(this.numRows * this.numCols / 4);
-
-    this.render();
-  },
-
   initialize: function() {
     this.board = new Board();
     this.numRows = 6;
@@ -124,5 +114,16 @@ var BoardView = Backbone.View.extend({
 
   appendMsg: function(msg, type) {
     this.$el.append( '<div class="msg ' + type  + '">' + msg + '</div>' );
+  },
+
+  resetBoard: function() {
+    this.board.reset();
+
+    this.numRows = +$('#numRows').val();
+    this.numCols = +$('#numCols').val();
+    this.numBombs = Math.floor(this.numRows * this.numCols / 4);
+
+    this.$el.find('.msg').remove();
+    this.render();
   }
 });
