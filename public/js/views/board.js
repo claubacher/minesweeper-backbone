@@ -39,7 +39,7 @@ var BoardView = Backbone.View.extend({
     this.listenToOnce(cellView, 'clickedOnZero', this.revealMore);
 
     cellView.listenToOnce(this.board, 'gameOver', cellView.disableClick);
-    
+
     this.$el.find('.cells').append( cellView.render().el );
   },
 
@@ -118,6 +118,7 @@ var BoardView = Backbone.View.extend({
 
   resetBoard: function() {
     this.board.reset();
+    this.stopListening();
 
     this.numRows = +$('#numRows').val();
     this.numCols = +$('#numCols').val();
